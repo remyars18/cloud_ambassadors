@@ -90,7 +90,7 @@ Deploying a Dockerized Environment on AWS EC2
                                  -- Type: Custom TCP
                                  -- Port Range: 3006
                                  -- Source:
-                                         Select My IP to allow access only from your current IP address.
+                                         Select your IP to allow access only from your current IP address.
    Save the rule
 11.   Access the Service:
            In the AWS EC2 Dashboard, locate your instance and Copy its **Public IPv4 Address**.
