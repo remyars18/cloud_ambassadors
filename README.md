@@ -97,7 +97,8 @@ Deploying a Dockerized Environment on AWS EC2
 12.  Test the Service:
    open a browser and visit the following URL:
    public-ip:3006  
-Replace `public-ip` with your actual EC2 public IP address. For example:
+Replace `public-ip` with your actual EC2 public IP address.
+ 
   You should see the "Welcome to Nginx Container!"
 
    
