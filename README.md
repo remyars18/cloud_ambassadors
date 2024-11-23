@@ -27,8 +27,8 @@ Deploying a Dockerized Environment on AWS EC2
    sudo yum install docker -y             # install the docker
    sudo systemctl start docker            # start the docker service
    sudo systemctl status docker           # check the status of the docker
-   sudo usermod -aG docker ec2-user      # add ec2-user to docker group . Adding ec2-user to the docker group gives it the necessary permissions without requiring sudo.
-   newgrp docker                         # activates the changes otherwise exit and login again6. 
+   sudo usermod -aG docker ec2-user      # add ec2-user to docker group. Adding ec2-user to the docker group gives it the necessary permissions without requiring sudo.
+   newgrp docker                         # activates the changes otherwise exit and login again. 
    
 
 4. On your EC2 instance, create a directory for the project:
@@ -79,12 +79,12 @@ Deploying a Dockerized Environment on AWS EC2
     ```bash
     docker build -t nginx-container .                   # Build the docker image named nginx-container from dockerfile
     docker run -d -p 3006:80 nginx-container            # Runs a docker container , mapping port 3006 on your host machine to port 80 inside the container
-    docker ps
-     ```                                        # Verify that the container is running
+    docker ps                                             # Verify that the container is running
 
+     ```                                       
 
 10.  Configuring Security Group for Host Port 3006:
-      Log in to your AWS account and go to the EC2 Dashboard and  and select the ec2-instance which you have created and  navigate to Security Groups under Security section.
+      Log in to your AWS account and go to the EC2 Dashboard and select the ec2-instance which you have created and  navigate to Security Groups under Security section.
       Find and select the Security Group attached to your EC2 instance and Click the Inbound rules tab and then click Edit inbound rules.
       In the Inbound rules section, add a new rule:
                                  -- Type: Custom TCP
