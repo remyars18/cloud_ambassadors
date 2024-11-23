@@ -19,7 +19,7 @@ Deploying a Dockerized Environment on AWS EC2
 2. Connect to the Instance
       Use your key pair to SSH into the instance by below bash command;
    ```bash
-      ssh -i your-key.pem ec2-user@<public-ip 0f the ec2 instance>
+      ssh -i your-key.pem ec2-user@<public-ip of the ec2 instance>
 3. Install Docker on the EC2 Instance
      Update the package manager and install dependencies:For Amazon Linux 2:use below bash commands:
    ```bash
